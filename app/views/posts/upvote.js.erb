@@ -1,0 +1,1 @@
+$('.voting-partial.' + <%= @post.id.to_s %>).html("<%= j( render 'votes')%>")

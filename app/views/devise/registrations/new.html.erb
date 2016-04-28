@@ -1,0 +1,32 @@
+<div id="signup-wrapper">
+  <div id="nav">
+    <%= link_to image_tag("logo-2.png", :class => "nav-home"), root_path %>
+  </div>
+  <div id="signup-form-wrapper">
+    <h2>I Can Has Sign Up?</h2>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true %>
+    </div>
+    <% if f.object.password_required? %>
+    <div class="field">
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
+    <div class="field">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    </div>
+    <% end %>
+    <div class="actions">
+      <%= f.submit "Sign up", :class => "form-button" %>
+    </div>
+    <% end %>
+    <br><%= render "devise/shared/links" %>
+  </div>
+</div>

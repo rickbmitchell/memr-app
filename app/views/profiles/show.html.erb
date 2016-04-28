@@ -1,0 +1,21 @@
+<div id="profile-wrapper">
+  <div id="nav">
+    <%= link_to image_tag("logo-2.png", :class => "nav-home"), root_path %><%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-logout" %>
+  </div>
+  <div id="profile-info">
+    <h2><%= @profile.fname %>'s Profile</h2>
+    <%= image_tag @profile.avatar.url, :id => "avatar" %>
+    <h3>Name: <%= @profile.fname %> <%= @profile.lname %></h3><br>
+    <h3>Location: <%= @profile.location %> </h3><br>
+    <% if current_user && current_user.id == @profile.user_id %>
+    <%= button_to 'Edit Profile', edit_profile_path(current_user), method: :get, :class => "form-button" %>
+    <%= button_to "Cancel My Account", "/users/#{current_user.id}/delete", method: :delete, :class => "form-button2" %>
+    <% end %>
+    <h2><%=@profile.fname%>'s Wall of Memes</h2>
+    <div id="meme-container">
+      <% @posts.reverse.each do |p|  %>
+      <%= link_to image_tag(p.avatar.url), post_path(p.id), :id => "avatar-meme" %>
+      <% end %>
+    </div>
+  </div>
+</div>

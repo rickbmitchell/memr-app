@@ -1,0 +1,20 @@
+<div id="archive-wrapper">
+  <div id="nav">
+    <%= link_to image_tag("logo-2.png", :class => "nav-home"), root_path %>
+    <% if user_signed_in? %>
+    <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-logout" %>
+    <%= link_to "Your Profile", profile_path(current_user.id), class: "nav-profile" %>
+    <% end %>
+  </div>
+  <div id="winner-wrap">
+    <div id="winner-pic"><%= image_tag "trophy.jpg" %></div>
+    <h2> And The Winners Are... </h2>
+    <div id="winning-meme">
+      <% @winners.each do |w|%>
+      <%= image_tag w.post.avatar.url, :id => "meme-win" %>
+      <h4>by: <%= link_to w.post.user.profile.username, "/profiles/#{w.post.user_id}" %></h4><br>
+      <p>Votes: <%= w.post.votes.count %></p>
+      <%end%>
+    </div>
+  </div>
+</div>

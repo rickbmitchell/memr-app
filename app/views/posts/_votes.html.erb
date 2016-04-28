@@ -1,0 +1,8 @@
+<% post ||= @post %>
+<div class="vote-info">
+  <%= pluralize(post.votes.count, "Vote") %>
+  <%= button_to upvote_post_path(post.id), method: :post, :id => "vote-button", remote: true do %>
+    <i class="fa fa-plus-square fa-2x" aria-hidden="true"></i>
+  <% end %>
+
+</div>

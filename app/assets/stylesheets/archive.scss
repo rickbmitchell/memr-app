@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#nav{
+  background-color: rgb(23,76,128);
+  margin: 0px;
+  // border-bottom: 5px solid tomato;
+  // height: 7%;
+  // outline: 5px solid #75C2FA;
+
+  .nav-profile, .nav-logout {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    float: right;
+    margin-top: 1%;
+    margin-right: 3%;
+  }
+
+  .nav-contest {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    float: left;
+    margin-top: 1%;
+    margin-left: 2%;
+    margin-right: 1%;
+  }
+}
+
+#archive-wrapper {
+  padding:0;
+  margin:0;
+  top:0;
+  left:0;
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 3000%;
+  max-height: 3000%;
+  position: absolute;
+  background-color: rgb(23,76,128);
+
+  #winner-wrap {
+    text-align: center;
+
+    #winner-pic {
+      padding-top: 2%;
+    }
+
+    h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
+    padding-top: 2%;
+    margin-bottom: 1%;
+    margin-left: 1%;
+    color: white;
+    }
+
+    #winning-meme {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+
+      #meme-win {
+       width: 25%;
+       height: 100%;
+       margin-bottom: 1%;
+       margin-left: 2%;
+       margin-top: 1%;
+       margin-right: 2%;
+      }
+
+      h4 {
+        color: white;
+        font-family: 'Lato', sans-serif;
+        margin-top: 23%;
+        margin-left: -1%;
+        margin-right: 2%;
+        display: inline;
+
+        a:link {
+          text-decoration: none;
+          color: #75C2FA;
+          cursor: pointer;
+        }
+        a:visited {
+          color: #75C2FA;
+        }
+      }
+
+      p {
+        margin-top: 25%;
+        font-family: 'Lato', sans-serif;
+        color: white;
+        margin-left: -7%;
+        display: inline;
+        padding-right: 5%;
+      }
+    }
+  }
+}

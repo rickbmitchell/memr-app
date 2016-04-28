@@ -1,0 +1,21 @@
+<div id="nav">
+<%= link_to image_tag("logo-2.png", :class => "nav-home"), root_path %>
+<% if user_signed_in? %>
+  <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-logout" %>
+  <%= link_to "Your Profile", profile_path(current_user.id), class: "nav-profile" %>
+<% end %>
+</div>
+
+<div id="submit-meme">
+  <h2>Update Your Meme</h2>
+  <%= image_tag @current_image_url %>
+   <%= form_for @post, :html => { :multipart => true } do |f| %>
+   <%= f.label :top_text, "Top Text" %>
+   <%= f.text_field :top_text, maxlength: @max_top, id: 'top_text' %><br>
+   <p>Characters left: <span id="counter1" data-maximum-length="<%= @max_top %>"><%= @max_top %></span></p>
+   <%= f.label :bottom_text, "Bottom Text" %>
+   <%= f.text_field :bottom_text, maxlength: @max_bottom, id: 'bottom_text' %><br>
+   <p>Characters left: <span id="counter2" data-maximum-length="<%= @max_bottom %>"><%= @max_bottom %></span></p>
+   <%= f.submit :update, :class => "form-button" %>
+   <% end %>
+</div>

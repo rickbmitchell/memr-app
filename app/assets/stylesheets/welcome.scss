@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#home-wrapper {
+  position: absolute;
+  padding:0;
+  margin:0;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(23,76,128);
+}
+
+  #main-title {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 5rem;
+    padding-top: 10%;
+
+    h1 {
+      margin-bottom: 0px;
+    }
+
+  }
+
+  .description {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+      p {
+        margin-top: 0px;
+      }
+  }
+
+
+  #button-style{
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    color: white;
+    width: 12%;
+    height: 40px;
+    background-color: #469CD5;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+      a:link{
+         text-decoration: none;
+         color: white;
+      }
+      a:visited{
+         text-decoration: none;
+         color: white;
+      }
+      a:hover{
+         opacity: 0.6;
+      }
+  }
+      .signup{
+        display: inline-block;
+        text-align: center;
+        margin-top: 2%;
+        margin-left: 38%
+      }
+      .login{
+        display: inline-block;
+        margin-top: 2%;
+      }
+      .logout{
+        position: absolute;
+      }
+
+
+  .with-twitter{
+     position: absolute;
+     margin-top: 6%;
+     margin-left: -18%;
+     width: 12%;
+     height: 40px;
+     font-size: 1rem;
+     background-color: #75C2FA;
+     border: none;
+     cursor: pointer;
+     a:link{
+        text-decoration: none;
+        color: white;
+     }
+     a:visited{
+        text-decoration: none;
+        color: white;
+     }
+     a:hover{
+        opacity: 0.6;
+     }
+     i {
+      color: white;
+      padding-right: 1%;
+     }
+  }
+
+  #button-style2{
+   font-family: 'Lato', sans-serif;
+   font-size: 1.5rem;
+   color: white;
+   width: 15%;
+   height: 50px;
+   background-color: #469CD5;
+   padding: 0;
+   border: none;
+   cursor: pointer;
+      a:link{
+         text-decoration: none;
+         color: white;
+      }
+      a:visited{
+         text-decoration: none;
+         color: white;
+      }
+      a:hover{
+         opacity: 0.6;
+      }
+    animation-name: enter;
+    animation-duration: 4s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+  }
+
+  .post-meme {
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 42%;
+  }
+
+
+#signup-wrapper, #login-wrapper {
+  position: absolute;
+  padding:0;
+  margin:0;
+  top:0;
+  left:0;
+  width: 100%;
+  min-height: 100%;
+  height: 725px;
+  background-color: rgb(23,76,128);
+  color: white;
+
+  #login-form-wrapper, #signup-form-wrapper {
+    text-align: center;
+
+    h2 {
+      font-family: Impact;
+      color: white;
+      font-size: 3rem;
+      padding-top: 5%;
+    }
+    a:link{
+      text-decoration: none;
+      color: white;
+    }
+    .field {
+      font-family: 'Lato', sans-serif;
+      font-size: 1.2rem;
+      margin-top: 1%;
+    }
+    #user_email, #user_password, #user_password_confirmation {
+      width: 20%;
+      height: 5%;
+      font-size: 1.2rem;
+    }
+    .form-button {
+      border: none;
+      margin-top: 1%;
+      font-family: 'Lato', sans-serif;
+      font-size: 1rem;
+      color: white;
+      width: 12%;
+      height: 40px;
+      background-color: #469CD5;
+      padding: 0;
+      text-align: center;
+      cursor: pointer;
+        a:link{
+           text-decoration: none;
+           color: white;
+        }
+        a:visited{
+           text-decoration: none;
+           color: white;
+        }
+        a:hover{
+           opacity: 0.6;
+        }
+    }
+  }
+}
+
+#nav{
+  background-color: rgb(23,76,128);
+  margin: 0px;
+  // border-bottom: 5px solid tomato;
+  // height: 7%;
+  // outline: 5px solid #75C2FA;
+
+  .nav-profile, .nav-logout {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    float: right;
+    margin-top: 1%;
+    margin-right: 3%;
+  }
+
+  .nav-contest {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    float: left;
+    margin-top: 1%;
+    margin-left: 2%;
+    margin-right: 1%;
+  }
+}
+
+#devise-links {
+  color: white;
+  a:link{
+    text-decoration: none;
+    color: white;
+  }
+  a:visited{
+    text-decoration: none;
+    color: white;
+  }
+}
+
+@keyframes enter {
+  0%   {background-color: #469CD5;}
+  25%  {background-color: #75C2FA;}
+  50%  {background-color: #469CD5;}
+  100% {background-color: #75C2FA;}
+}

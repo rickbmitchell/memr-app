@@ -1,0 +1,35 @@
+<div id="nav">
+  <%= link_to image_tag("logo-2.png", :class => "nav-home"), root_path %>
+  <% if user_signed_in? %>
+  <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-logout" %>
+  <% end %>
+</div>
+<div id="post-wrapper">
+  <div id="single-post">
+    <h2>Check This Meme Out!</h2>
+    <%= image_tag "/memes/#{@post.id}-#{@post.user_id}entry.jpg" %>
+    <div id="share-post">
+      <% if current_user.id == @post.user_id %>
+      <div id="dl-meme">
+        <%= link_to "/memes/#{@post.id}-#{@post.user_id}entry.jpg", :download => 'yourmeme' do %>Download Your Meme<span class="fa fa-arrow-circle-down fa-2x"></span><% end %>
+        <% end %>
+      </div>
+      <div class="tweetbox">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-text="Check out my meme and vote for me at Memr!" data-via="memrmemes">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      </div>
+      <% if @post.created_at <= Time.zone.now.end_of_week %>
+      <%= content_tag :div, class: "voting-partial #{@post.id.to_s}" do %>
+      <%= render 'votes'%>
+      <% end %>
+      <% end %>
+      <div id="author">
+        by: <%= link_to @post.user.profile.username, "/profiles/#{@post.user_id}" %>
+      </div>
+      <div id="change-post">
+        <%= button_to 'Edit Post', edit_post_path(@post.id), method: :get, :class => "post-button" %>
+        <%= button_to "Delete Post", "/posts/#{@post.id}", method: :delete, :class => "post-button2" %>
+      </div>
+    </div>
+  </div>
+</div>
