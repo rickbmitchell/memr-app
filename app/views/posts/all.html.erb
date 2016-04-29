@@ -12,8 +12,8 @@
     <div class="vote-info">
       <%= content_tag :div, class: "voting-partial #{p.id.to_s}" do %>
       <%= render partial: "posts/votes", locals: { post: p} %>
-      <p>by: <%= link_to p.user.profile.username, "/profiles/#{p.user_id}" %></p>
       <% end %>
+      <p>by: <%= link_to p.user.profile.username, "/profiles/#{p.user_id}" %></p>
     </div>
     <% end %>
   </div>
