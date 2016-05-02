@@ -18,5 +18,9 @@ class Archive < ActiveRecord::Base
     puts Archive.create(post_id: ordered.first.id)
   end
 
+  def self.testing
+    puts "Testing"
+  end
+
 
 end
