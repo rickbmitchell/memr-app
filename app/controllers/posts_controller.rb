@@ -15,7 +15,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    @current_image_url = Meme.get_current_meme.avatar(:medium)
+    @current_image_url = Meme.get_current_meme.avatar.url(:medium)
     @max_top = Post.validators_on( :top_text ).first.options[:maximum]
     @max_bottom = Post.validators_on( :bottom_text ).first.options[:maximum]
   end

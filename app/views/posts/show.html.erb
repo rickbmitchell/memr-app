@@ -7,11 +7,12 @@
 <div id="post-wrapper">
   <div id="single-post">
     <h2>Check This Meme Out!</h2>
-    <%= image_tag "/memes/#{@post.id}-#{@post.user_id}entry.jpg" %>
+    <%= image_tag "/memes/#{@post.id}-#{@post.user_id}entry.jpg", id: "meme-image" %>
+    <div id="center">
     <div id="share-post">
       <% if current_user.id == @post.user_id %>
       <div id="dl-meme">
-        <%= link_to "/memes/#{@post.id}-#{@post.user_id}entry.jpg", :download => 'yourmeme' do %>Download Your Meme<span class="fa fa-arrow-circle-down fa-2x"></span><% end %>
+        <%= link_to "/memes/#{@post.id}-#{@post.user_id}entry.jpg", :download => 'yourmeme' do %>Download Your Meme<div class="fa fa-arrow-circle-down fa-2x dl-icon"></div><% end %>
         <% end %>
       </div>
       <div class="tweetbox">
@@ -31,5 +32,6 @@
         <%= button_to "Delete Post", "/posts/#{@post.id}", method: :delete, :class => "post-button2" %>
       </div>
     </div>
+  </div>
   </div>
 </div>

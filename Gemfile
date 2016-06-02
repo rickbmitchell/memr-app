@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby '2.2.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'paperclip', '~> 4.2'
 gem 'devise'
@@ -33,6 +33,7 @@ gem 'multi_xml', '~> 0.5.5'
 gem 'whenever', '~> 0.9.4'
 gem 'mocha', '~> 1.1'
 gem 'chronic', '~> 0.10.2'
+gem 'rails_12factor'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

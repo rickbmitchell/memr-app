@@ -19,4 +19,8 @@ class Meme < ActiveRecord::Base
     Meme.where("status = 'current'").first
   end
 
+  def self.get_info
+    puts "INFO IS #{Meme.first.status} AND #{Meme.first.id}"
+  end
+
 end
