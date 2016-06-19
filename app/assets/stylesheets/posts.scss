@@ -27,7 +27,7 @@
 
     .vote-info {
       clear: both;
-      // margin-top: 14%;
+      margin-top: 1%; //change
       // margin-left: 0.5%;
       // margin-right: 4%;
       font-family: 'Lato', sans-serif;
@@ -46,8 +46,9 @@
         // font-size: 0.8rem;
       }
       p {
-        display: inline;
+        // display: inline;
         margin-left: -250%;
+        margin-top: 200px;
 
         a:link {
           text-decoration: none;
@@ -63,7 +64,7 @@
       #meme-index {
        width: 15%;
        height: 100%;
-       margin-bottom: 1%;
+       margin-bottom: 2%; //change
        margin-left: 1%;
        margin-top: 1%;
       }
@@ -153,7 +154,7 @@
           position: absolute;
           top: 20px;
           width: 50%;
-          left: 0;
+          left: 32px;
         }
       a:link {
         text-decoration: none;

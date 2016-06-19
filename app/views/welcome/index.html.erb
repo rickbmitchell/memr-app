@@ -13,11 +13,11 @@
     <p>A Weekly Meme Contest. Post. Share. Win!</p>
   </div>
   <% if user_signed_in? %>
-  <button id="button-style2" class="post-meme"><%= link_to "Enter Now!", new_post_path %></button>
+  <div id="button-style2" class="post-meme"><%= link_to "Enter Now!", new_post_path %></div>
   <% end %>
   <% if !current_user %>
-  <button id="button-style" class="signup"><%= link_to "Sign Up", new_user_registration_path %></button>
-  <button id="button-style" class="login"><%= link_to "Log In", new_user_session_path %></button>
-  <button class="with-twitter"><i class="fa fa-twitter" aria-hidden="true"></i><%= link_to "Log In with Twitter", user_omniauth_authorize_path(:twitter) %></button>
+  <div id="button-style" class="signup"><%= link_to "Sign Up", new_user_registration_path %></div>
+  <div id="button-style" class="login"><%= link_to "Log In", new_user_session_path %></div>
+  <div class="with-twitter"><i class="fa fa-twitter" aria-hidden="true"></i><%= link_to "Log In with Twitter", user_omniauth_authorize_path(:twitter) %></div>
   <% end %>
 </div>
